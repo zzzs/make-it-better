@@ -8,7 +8,7 @@ const numCPUs = require('os').cpus().length;
 const fileDir = './files/';
 
 const params = process.argv.splice(2);
-const port = params[1] || 8888;
+const port = params[0] || 8888;
 
 if (cluster.isMaster) {
     console.log(`主进程 ${process.pid} 正在运行`);

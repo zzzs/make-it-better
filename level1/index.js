@@ -5,7 +5,7 @@ const url = require('url');
 
 const fileDir = './files/';
 const params = process.argv.splice(2);
-const port = params[1] || 8888;
+const port = params[0] || 8888;
 http.createServer(function (request, response) {
     let pathname = url.parse(request.url)['pathname'];
     pathname = pathname === '/' ? 'small.txt' : pathname;
